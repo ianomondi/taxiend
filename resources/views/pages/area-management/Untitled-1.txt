@@ -1,0 +1,37 @@
+for(int index= 0; index<a.length; index++){
+    if(a[index]% 2 !=2){
+        containsOddValue= true;
+
+        oddValue[oddValueIndex]= a[index];
+        oddValueIndex++;
+    }else{
+        evenValue[evenValueIndex] = a[index];
+        evenValueIndex++;
+    }
+    if(a[index] > maxValue){
+				maxValue = a[index];
+			}
+}
+if(containsOddValue){
+			if(maxValue % 2 == 0){
+				for(int oddIndex = 0; oddIndex < oddValuesIndex; oddIndex++){
+					for(int evenIndex = 0; evenIndex < evenValuesIndex; evenIndex++){
+						if(evenValues[evenIndex] != maxValue){
+							if(oddValues[oddIndex] > evenValues[evenIndex]){
+								isInertial = 1;
+							}else{
+								isInertial = 0;
+								break;
+							}
+						}else{
+							isInertial = 1;
+						}
+					}
+					if(isInertial == 0){
+						break;
+					}
+				}
+			}
+		}
+		return isInertial;
+	}

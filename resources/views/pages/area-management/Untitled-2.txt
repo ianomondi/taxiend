@@ -1,0 +1,12 @@
+public class DisposableResourceHolder {
+    private SafeHandle resource; 
+    // handle to a resource 
+    protected virtual void Dispose(bool disposing)
+    {
+        if (disposing)
+        {
+            if (resource! null) 
+            resource.Dispose(); 
+            }  
+            } 
+            } 
